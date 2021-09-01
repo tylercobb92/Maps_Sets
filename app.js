@@ -27,16 +27,18 @@ function isVowel(char) {
 }
 
 function vowelCount(str) {
-    const vowelMap = new Map();
+    const vowelsMap = new Map();
     for (let char of str) {
-        let lowerCase = char.toLowerCase();
-        if (isVowel(lowerCase)) {
-            if (vowelMap.has(lowerCase)) {
-                vowelMap.set(lowerCase, vowelMap.get(lowerCase) + 1);
+        let lowerCaseChar = char.toLowerCase();
+        if (isVowel(lowerCaseChar)) {
+            if (vowelsMap.has(lowerCaseChar)) {
+                vowelsMap.set(lowerCaseChar, vowelsMap.get(lowerCaseChar) + 1);
             } else {
-                vowelMap.set(lowerCase, 1);
+                vowelsMap.set(lowerCaseChar, 1);
             }
         }
     }
-    return vowelMap;
+    return vowelsMap;
 }
+
+
